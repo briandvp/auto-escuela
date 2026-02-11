@@ -1,0 +1,200 @@
+.page-hero.moto-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    padding: 150px 0 80px;
+    text-align: center;
+    color: #fff;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #ffc107;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.moto-card {
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+
+    &:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    &.featured {
+        border: 3px solid #e94560;
+        position: relative;
+
+        .moto-header {
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffc107;
+            color: #1a1a2e;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+    }
+
+    .moto-header {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        padding: 35px 30px;
+        text-align: center;
+        position: relative;
+
+        .category-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #ffc107;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    .moto-body {
+        padding: 35px;
+
+        .price {
+            text-align: center;
+            margin-bottom: 30px;
+
+            .currency {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #1a1a2e;
+                vertical-align: top;
+            }
+
+            .amount {
+                font-size: 3.5rem;
+                font-weight: 800;
+                color: #1a1a2e;
+            }
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px 0;
+                border-bottom: 1px solid #eee;
+                font-size: 0.95rem;
+
+                i {
+                    color: #25d366;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+.safety-section {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+
+    .section-title {
+        color: #fff;
+
+        &::after {
+            background: #ffc107;
+        }
+    }
+
+    .lead {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+    }
+
+    .safety-icon {
+        text-align: center;
+        padding: 40px;
+
+        i {
+            font-size: 15rem;
+            color: rgba(255, 193, 7, 0.15);
+        }
+    }
+
+    .safety-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .safety-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: rgba(255, 193, 7, 0.1);
+                transform: translateX(10px);
+            }
+
+            i {
+                font-size: 1.8rem;
+                color: #ffc107;
+            }
+
+            span {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero.moto-hero {
+        padding: 120px 0 60px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .safety-section {
+        .safety-icon {
+            display: none;
+        }
+
+        .safety-items {
+            grid-template-columns: 1fr;
+        }
+    }
+}

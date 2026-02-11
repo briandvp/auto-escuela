@@ -1,0 +1,110 @@
+<!-- Hero Section with Slider -->
+<section class="hero-section">
+    <!-- Background Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Animated Background Elements -->
+    <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Slider Content -->
+    <!-- Slider Content -->
+    <div class="hero-slider">
+        <!-- Slide 1: Auto -->
+        <div class="slide" [class.active]="currentSlide === 0">
+            <div class="slide-bg" style="background-image: url('assets/images/slide-auto.jpg');"></div>
+            <!-- Placeholder path -->
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="slide-content-box animate__animated animate__fadeInLeft">
+                            <h1>PROMOCIÓN: 5 CLASES DE <br>AUTO X $188.000</h1>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> Clases de 1 hora.</li>
+                                <li><i class="fas fa-check-circle"></i> Servicio Puerta a Puerta.</li>
+                                <li><i class="fas fa-check-circle"></i> En Capital y Gran Buenos Aires.</li>
+                                <li><i class="fas fa-check-circle"></i> Vehículos - Doble Comando - Manual o Automático
+                                    (Consultar).</li>
+                            </ul>
+                            <div class="slide-buttons">
+                                <a routerLink="/clases-auto" class="btn-primary-custom">+ INFO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Moto -->
+        <div class="slide" [class.active]="currentSlide === 1">
+            <div class="slide-bg" style="background-image: url('assets/images/slide-moto.jpg');"></div>
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="slide-content-box animate__animated animate__fadeInLeft">
+                            <h1>CLASES DE MOTO <br>TODAS LAS CILINDRADAS</h1>
+                            <div class="price-row">
+                                <div class="price-item">
+                                    <span class="label">CAT A21:</span>
+                                    <span class="value">$129.000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="label">CAT A22:</span>
+                                    <span class="value">$140.000</span>
+                                </div>
+                            </div>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> 2 Clases de 2hs 30 min.</li>
+                                <li><i class="fas fa-check-circle"></i> Te llevamos a rendir.</li>
+                                <li><i class="fas fa-check-circle"></i> Incluye elementos de seguridad.</li>
+                            </ul>
+                            <div class="slide-buttons">
+                                <a routerLink="/clases-moto" class="btn-primary-custom">+ INFO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Automatico -->
+        <div class="slide" [class.active]="currentSlide === 2">
+            <div class="slide-bg" style="background-image: url('assets/images/slide-auto.jpg');"></div>
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="slide-content-box animate__animated animate__fadeInLeft">
+                            <h1>CLASES CON CAJA <br>AUTOMÁTICA</h1>
+                            <div class="price-single">$218.000</div>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> 5 Clases.</li>
+                                <li><i class="fas fa-check-circle"></i> Unidades modernas.</li>
+                                <li><i class="fas fa-check-circle"></i> Servicio Puerta a Puerta.</li>
+                            </ul>
+                            <div class="slide-buttons">
+                                <a routerLink="/clases-auto" class="btn-primary-custom">+ INFO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-controls">
+        <button class="slider-btn prev" (click)="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots">
+            <span *ngFor="let dot of slides; let i = index" class="dot" [class.active]="currentSlide === i"
+                (click)="goToSlide(i)"></span>
+        </div>
+        <button class="slider-btn next" (click)="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>

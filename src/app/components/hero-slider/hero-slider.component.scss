@@ -1,0 +1,209 @@
+@import '../../../styles.scss';
+
+.hero-section {
+    position: relative;
+    height: 600px; // Fixed height mostly
+    overflow: hidden;
+    margin-top: 130px; // Space for the fixed header (Top Bar + Nav)
+
+    .hero-slider {
+        position: absolute;
+        inset: 0;
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+
+            &.active {
+                opacity: 1;
+                z-index: 10;
+            }
+
+            .slide-bg {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                filter: brightness(0.8); // Darken the image slightly
+                background-color: #555; // Fallback color
+
+                // Overlay gradient for text readability
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.1) 100%);
+                }
+            }
+        }
+    }
+
+    .slide-content-box {
+        position: relative;
+        z-index: 20;
+        color: #fff;
+        padding-left: 20px;
+        max-width: 650px;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800; // Extra Bold
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+            @media (min-width: 992px) {
+                font-size: 3rem;
+            }
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+
+            li {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+                line-height: 1.4;
+
+                i {
+                    color: #fff; // White check icons per reference
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        .price-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            .price-item {
+                .label {
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                .value {
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: #fff;
+                }
+            }
+        }
+
+        .price-single {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: $primary-color;
+        }
+
+        .slide-buttons {
+            .btn-primary-custom {
+                background: $primary-color;
+                color: #fff;
+                border-radius: 4px;
+                padding: 10px 25px;
+                font-size: 0.9rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: darken($primary-color, 10%);
+                    color: #fff;
+                    transform: none; // Reset bounce
+                }
+            }
+        }
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 30;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .slider-dots {
+            display: flex;
+            gap: 10px;
+
+            .dot {
+                width: 12px;
+                height: 12px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 0; // Square dots? Or circle? Reference cuts off. Sticking to simple.
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &.active {
+                    background: $primary-color;
+                }
+            }
+        }
+
+        .slider-btn {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background: $primary-color;
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 991px) {
+    .hero-section {
+        margin-top: 80px; // Adjust for mobile header height
+        height: auto;
+        min-height: 500px;
+
+        .hero-slider .slide .slide-bg {
+            background-position: left center; // Shift image on mobile
+        }
+
+        .slide-content-box {
+            padding: 40px 20px;
+            text-align: center;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features-list li {
+                justify-content: center;
+                text-align: left;
+            }
+
+            .price-row {
+                justify-content: center;
+            }
+        }
+    }
+}

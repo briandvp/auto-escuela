@@ -1,0 +1,199 @@
+.footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    margin-top: auto;
+
+    .footer-main {
+        padding: 60px 0 40px;
+    }
+
+    .footer-brand {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .logo-icon {
+                font-size: 2rem;
+                color: #ffc107;
+            }
+
+            .logo-text {
+                display: flex;
+                flex-direction: column;
+                line-height: 1.1;
+
+                .brand-name {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    color: #ffc107;
+                    letter-spacing: 2px;
+                }
+
+                .brand-tagline {
+                    font-size: 0.6rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    letter-spacing: 4px;
+                }
+            }
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+
+            a {
+                width: 40px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #ffc107;
+                    color: #1a1a2e;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #ffc107;
+        position: relative;
+        padding-bottom: 10px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: #ffc107;
+        }
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+                display: inline-block;
+
+                &:hover {
+                    color: #ffc107;
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    .contact-info {
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+
+            i {
+                width: 35px;
+                height: 35px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+
+            &:hover {
+                color: #ffc107;
+
+                i {
+                    background: #ffc107;
+                    color: #1a1a2e;
+                }
+            }
+        }
+    }
+
+    .hours {
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin: 0;
+
+            i {
+                color: #ffc107;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+
+        .footer-brand .logo-container {
+            justify-content: center;
+        }
+
+        .footer-brand .social-links {
+            justify-content: center;
+        }
+
+        h5::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-info .contact-item {
+            justify-content: center;
+        }
+
+        .footer-bottom {
+            text-align: center;
+
+            .col-md-6 {
+                text-align: center !important;
+            }
+        }
+    }
+}
