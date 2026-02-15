@@ -19,6 +19,7 @@ import { ClasesAutoComponent } from './pages/clases-auto/clases-auto.component';
 import { ClasesMotoComponent } from './pages/clases-moto/clases-moto.component';
 import { TeoricoComponent } from './pages/teorico/teorico.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { GithubRobotComponent } from './components/github-robot/github-robot.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     ClasesAutoComponent,
     ClasesMotoComponent,
     TeoricoComponent,
-    ContactoComponent
+    ContactoComponent,
+    GithubRobotComponent
   ],
   imports: [
     BrowserModule,

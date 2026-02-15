@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-clases-auto',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClasesAutoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
+    this.seoService.updateSeoData(
+      'Clases de Auto',
+      'Clases de manejo de auto personalizadas. Instructores pacientes y vehículos doble comando. Preparate para el examen práctico en CABA y GBA.',
+      'clases de manejo auto, aprender a manejar auto, curso de manejo, examen de manejo, licencia de conducir auto, practica de manejo'
+    );
   }
 
 }

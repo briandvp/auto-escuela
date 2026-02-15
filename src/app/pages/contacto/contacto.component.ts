@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-contacto',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contacto.component.scss']
 })
 export class ContactoComponent {
+  constructor(private seoService: SeoService) {
+    this.seoService.updateSeoData(
+      'Contacto',
+      'Comunicate con Autoescuela Silver. Consultá precios, horarios y zonas de cobertura. Estamos para ayudarte a obtener tu licencia.',
+      'contacto autoescuela, telefono autoescuela, precio clases manejo, horarios autoescuela, donde aprender a manejar'
+    );
+  }
   formData = {
     nombre: '',
     telefono: '',
