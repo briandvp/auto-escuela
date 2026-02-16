@@ -15,8 +15,8 @@ export interface SeoData {
     providedIn: 'root'
 })
 export class SeoService {
-    private readonly defaultTitle = 'Autoescuela Silver | Escuela de Manejo en Buenos Aires';
-    private readonly defaultDesc = 'Aprende a manejar con Autoescuela Silver. Clases de manejo de auto y moto en Capital Federal y Gran Buenos Aires. Instructores calificados y vehículos doble comando.';
+    private readonly defaultTitle = 'Autoescuela | Escuela de Manejo en Buenos Aires';
+    private readonly defaultDesc = 'Aprende a manejar con Autoescuela. Clases de manejo de auto y moto en Capital Federal y Gran Buenos Aires. Instructores calificados y vehículos doble comando.';
     private readonly defaultImage = 'https://www.miautoescuela.es/assets/img/logo.png';
     private readonly siteUrl = 'https://www.miautoescuela.es';
 
@@ -28,7 +28,7 @@ export class SeoService {
 
     updateSeoData(data: SeoData) {
         // Title
-        const title = data.title ? `${data.title} | Autoescuela Silver` : this.defaultTitle;
+        const title = data.title ? `${data.title} | Autoescuela` : this.defaultTitle;
         this.titleService.setTitle(title);
         this.metaService.updateTag({ property: 'og:title', content: title });
         this.metaService.updateTag({ name: 'twitter:title', content: title });

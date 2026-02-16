@@ -11,11 +11,11 @@ export class TeoricoComponent implements OnInit {
   constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
-    this.seoService.updateSeoData(
-      'Material Teórico',
-      'Repasá las señales de tránsito y normas de seguridad vial. Material de estudio actualizado para aprobar el examen teórico de licencia de conducir.',
-      'señales de transito, examen teorico manejo, normas de transito, seguridad vial, curso teorico manejo, licencia de conducir teorico'
-    );
+    this.seoService.updateSeoData({
+      title: 'Material Teórico',
+      description: 'Repasá las señales de tránsito y normas de seguridad vial. Material de estudio actualizado para aprobar el examen teórico de licencia de conducir.',
+      keywords: 'señales de transito, examen teorico manejo, normas de transito, seguridad vial, curso teorico manejo, licencia de conducir teorico'
+    });
   }
 
 }

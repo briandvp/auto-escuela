@@ -8,11 +8,11 @@ import { SeoService } from 'src/app/services/seo.service';
 })
 export class ContactoComponent {
   constructor(private seoService: SeoService) {
-    this.seoService.updateSeoData(
-      'Contacto',
-      'Comunicate con Autoescuela Silver. Consultá precios, horarios y zonas de cobertura. Estamos para ayudarte a obtener tu licencia.',
-      'contacto autoescuela, telefono autoescuela, precio clases manejo, horarios autoescuela, donde aprender a manejar'
-    );
+    this.seoService.updateSeoData({
+      title: 'Contacto',
+      description: 'Comunicate con Autoescuela. Consultá precios, horarios y zonas de cobertura. Estamos para ayudarte a obtener tu licencia.',
+      keywords: 'contacto autoescuela, telefono autoescuela, precio clases manejo, horarios autoescuela, donde aprender a manejar'
+    });
   }
   formData = {
     nombre: '',

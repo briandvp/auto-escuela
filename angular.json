@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "autoescuela-silver": {
+    "autoescuela-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/autoescuela-silver",
+            "outputPath": "dist/autoescuela-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "autoescuela-silver:build:production"
+              "browserTarget": "autoescuela-web:build:production"
             },
             "development": {
-              "browserTarget": "autoescuela-silver:build:development"
+              "browserTarget": "autoescuela-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "autoescuela-silver:build"
+            "browserTarget": "autoescuela-web:build"
           }
         },
         "test": {

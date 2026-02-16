@@ -11,11 +11,11 @@ export class ClasesMotoComponent implements OnInit {
   constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
-    this.seoService.updateSeoData(
-      'Clases de Moto',
-      'Aprendé a manejar moto con seguridad. Cursos para principiantes y avanzados. Practicá en nuestra pista exclusiva o en tránsito real.',
-      'clases de manejo moto, aprender a manejar moto, curso de moto, examen de moto, licencia de conducir moto, practica de moto'
-    );
+    this.seoService.updateSeoData({
+      title: 'Clases de Moto',
+      description: 'Aprendé a manejar moto con seguridad. Cursos para principiantes y avanzados. Practicá en nuestra pista exclusiva o en tránsito real.',
+      keywords: 'clases de manejo moto, aprender a manejar moto, curso de moto, examen de moto, licencia de conducir moto, practica de moto'
+    });
   }
 
 }
