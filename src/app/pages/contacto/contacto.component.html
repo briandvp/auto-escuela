@@ -82,14 +82,32 @@
                                 <div class="form-group">
                                     <label for="nombre">Nombre completo *</label>
                                     <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" required
-                                        class="form-control" placeholder="Tu nombre">
+                                        class="form-control" [ngClass]="getFieldClass('nombre')"
+                                        (blur)="onFieldBlur('nombre')"
+                                        (input)="onFieldChange('nombre')"
+                                        placeholder="Tu nombre">
+                                    <div class="field-error" *ngIf="fieldTouched['nombre'] && fieldErrors['nombre']">
+                                        <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['nombre'] }}
+                                    </div>
+                                    <div class="field-success" *ngIf="fieldTouched['nombre'] && !fieldErrors['nombre'] && formData.nombre">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="telefono">Teléfono *</label>
                                     <input type="tel" id="telefono" name="telefono" [(ngModel)]="formData.telefono"
-                                        required class="form-control" placeholder="Tu teléfono">
+                                        required class="form-control" [ngClass]="getFieldClass('telefono')"
+                                        (blur)="onFieldBlur('telefono')"
+                                        (input)="onFieldChange('telefono')"
+                                        placeholder="Tu teléfono">
+                                    <div class="field-error" *ngIf="fieldTouched['telefono'] && fieldErrors['telefono']">
+                                        <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['telefono'] }}
+                                    </div>
+                                    <div class="field-success" *ngIf="fieldTouched['telefono'] && !fieldErrors['telefono'] && formData.telefono">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +115,16 @@
                         <div class="form-group mb-3">
                             <label for="email">Email *</label>
                             <input type="email" id="email" name="email" [(ngModel)]="formData.email" required
-                                class="form-control" placeholder="tu@email.com">
+                                class="form-control" [ngClass]="getFieldClass('email')"
+                                (blur)="onFieldBlur('email')"
+                                (input)="onFieldChange('email')"
+                                placeholder="tu@email.com">
+                            <div class="field-error" *ngIf="fieldTouched['email'] && fieldErrors['email']">
+                                <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['email'] }}
+                            </div>
+                            <div class="field-success" *ngIf="fieldTouched['email'] && !fieldErrors['email'] && formData.email">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </div>
 
                         <div class="form-group mb-3">
@@ -116,7 +143,16 @@
                         <div class="form-group mb-4">
                             <label for="mensaje">Mensaje *</label>
                             <textarea id="mensaje" name="mensaje" [(ngModel)]="formData.mensaje" required
-                                class="form-control" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                                class="form-control" [ngClass]="getFieldClass('mensaje')"
+                                (blur)="onFieldBlur('mensaje')"
+                                (input)="onFieldChange('mensaje')"
+                                rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                            <div class="field-error" *ngIf="fieldTouched['mensaje'] && fieldErrors['mensaje']">
+                                <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['mensaje'] }}
+                            </div>
+                            <div class="field-success" *ngIf="fieldTouched['mensaje'] && !fieldErrors['mensaje'] && formData.mensaje">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </div>
 
                         <button type="submit" class="btn-primary-custom w-100"

@@ -97,14 +97,17 @@
 
     <!-- Slider Controls -->
     <div class="slider-controls">
-        <button class="slider-btn prev" (click)="prevSlide()">
+        <button class="slider-btn prev" (click)="prevSlide()" title="Diapositiva anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
         <div class="slider-dots">
             <span *ngFor="let dot of slides; let i = index" class="dot" [class.active]="currentSlide === i"
-                (click)="goToSlide(i)"></span>
+                (click)="goToSlide(i)"
+                [title]="'Ir a diapositiva ' + (i + 1)"
+                role="button"
+                tabindex="0"></span>
         </div>
-        <button class="slider-btn next" (click)="nextSlide()">
+        <button class="slider-btn next" (click)="nextSlide()" title="Siguiente diapositiva">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>

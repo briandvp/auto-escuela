@@ -24,6 +24,9 @@
         height: 100%;
         position: relative;
         overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
 
         &::before {
             content: '';
@@ -37,7 +40,8 @@
             transition: transform 0.4s ease;
         }
 
-        &:hover {
+        &:hover,
+        &.expanded {
             transform: translateY(-15px);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 
@@ -52,6 +56,10 @@
                 i {
                     color: white;
                 }
+            }
+
+            .expand-icon {
+                transform: rotate(180deg);
             }
         }
 
@@ -85,7 +93,61 @@
             font-size: 0.95rem;
             line-height: 1.6;
             margin: 0;
+            flex-grow: 1;
         }
+
+        .expand-icon {
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+            color: $secondary-color;
+            font-size: 0.8rem;
+        }
+
+        .service-detail {
+            animation: slideDown 0.3s ease;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid rgba($secondary-color, 0.1);
+
+            .detail-text {
+                font-size: 0.9rem;
+                color: #666;
+                margin-bottom: 12px;
+                line-height: 1.5;
+            }
+
+            .detail-btn {
+                background: linear-gradient(135deg, $primary-color, $accent-color);
+                color: white;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-weight: 600;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
     }
 }
 

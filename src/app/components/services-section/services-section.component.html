@@ -8,43 +8,27 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let service of services; let i = index">
+                <div class="service-card animate__animated animate__fadeInUp"
+                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'"
+                    (click)="toggleServiceDetail(i)"
+                    [class.expanded]="expandedService === i"
+                    role="button"
+                    tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-calendar-week"></i>
+                        <i [class]="service.icon"></i>
                     </div>
-                    <h4>Clases los 7 días</h4>
-                    <p>Amplia disponibilidad horaria para adaptarnos a tu vida, solo indica el día y la hora.</p>
-                </div>
-            </div>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
 
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                    <div class="service-detail" *ngIf="expandedService === i">
+                        <p class="detail-text">{{ service.detail }}</p>
+                        <button class="detail-btn">Más información</button>
                     </div>
-                    <h4>Vamos a Domicilio</h4>
-                    <p>Pasamos a buscarte por tu hogar, trabajo o gimnasio para brindarte la clase.</p>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
-                    <div class="service-icon">
-                        <i class="fas fa-car-alt"></i>
+                    <div class="expand-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <h4>Alquiler para Examen</h4>
-                    <p>Te llevamos a rendir o te esperamos en la pista a la hora indicada.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
-                    <div class="service-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h4>Certificación</h4>
-                    <p>Adheridos a la Red de Autoescuelas Argentinas, garantía de calidad y seguridad.</p>
                 </div>
             </div>
         </div>

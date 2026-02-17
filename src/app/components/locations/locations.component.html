@@ -8,54 +8,38 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="location-card">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let location of locations; let i = index">
+                <div class="location-card animate__animated animate__fadeInUp"
+                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'"
+                    (click)="selectLocation(i)"
+                    [class.active]="selectedLocation === i"
+                    role="button"
+                    tabindex="0">
                     <div class="location-header">
                         <i class="fas fa-map-pin"></i>
-                        <h4>CABA</h4>
+                        <h4>{{ location.name }}</h4>
                     </div>
                     <div class="location-body">
-                        <p><i class="fas fa-location-dot"></i> Caballito</p>
-                        <p class="address">Rosario 841</p>
+                        <p><i class="fas fa-location-dot"></i> {{ location.city }}</p>
+                        <p class="address">{{ location.address }}</p>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="location-card">
-                    <div class="location-header">
-                        <i class="fas fa-map-pin"></i>
-                        <h4>Zona Norte</h4>
+                    <div class="location-details" *ngIf="selectedLocation === i">
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>{{ location.phone }}</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>{{ location.hours }}</span>
+                        </div>
+                        <button class="map-btn" (click)="openGoogleMaps(location); $event.stopPropagation()">
+                            <i class="fas fa-directions"></i> Ver en Google Maps
+                        </button>
                     </div>
-                    <div class="location-body">
-                        <p><i class="fas fa-location-dot"></i> Olivos</p>
-                        <p class="address">Maipú 3684</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="location-card">
-                    <div class="location-header">
-                        <i class="fas fa-map-pin"></i>
-                        <h4>Zona Oeste</h4>
-                    </div>
-                    <div class="location-body">
-                        <p><i class="fas fa-location-dot"></i> Ramos Mejía</p>
-                        <p class="address">Rosales 250</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="location-card">
-                    <div class="location-header">
-                        <i class="fas fa-map-pin"></i>
-                        <h4>Zona Sur</h4>
-                    </div>
-                    <div class="location-body">
-                        <p><i class="fas fa-location-dot"></i> Avellaneda</p>
-                        <p class="address">Pastor Obligado 75</p>
+                    <div class="expand-indicator">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
             </div>

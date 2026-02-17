@@ -7,34 +7,17 @@
                     <p class="lead">10 años de trayectoria formando conductores serios y responsables.</p>
 
                     <div class="features-list">
-                        <div class="feature-item">
+                        <div class="feature-item" *ngFor="let feature of [
+                            {icon: 'fas fa-tags', title: 'Precios Competitivos', text: 'Paga lo justo por cada clase de una hora, planes flexibles para todos los bolsillos.'},
+                            {icon: 'fas fa-user-graduate', title: 'Instructores Calificados', text: 'Todos nuestros instructores son calificados, buscando la excelencia en enseñanza.'},
+                            {icon: 'fas fa-sliders-h', title: 'Clases a Medida', text: 'Cada capacitación es distinta según la experiencia del alumno.'}
+                        ]">
                             <div class="feature-icon">
-                                <i class="fas fa-tags"></i>
+                                <i [class]="feature.icon"></i>
                             </div>
                             <div class="feature-text">
-                                <h5>Precios Competitivos</h5>
-                                <p>Paga lo justo por cada clase de una hora, planes flexibles para todos los bolsillos.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h5>Instructores Calificados</h5>
-                                <p>Todos nuestros instructores son calificados, buscando la excelencia en enseñanza.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-sliders-h"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h5>Clases a Medida</h5>
-                                <p>Cada capacitación es distinta según la experiencia del alumno.</p>
+                                <h5>{{ feature.title }}</h5>
+                                <p>{{ feature.text }}</p>
                             </div>
                         </div>
                     </div>
@@ -42,22 +25,12 @@
             </div>
 
             <div class="col-lg-6">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Años de Experiencia</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5000+</div>
-                        <div class="stat-label">Alumnos Graduados</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Tasa de Aprobación</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Zonas de Cobertura</div>
+                <div class="stats-grid" #statsGrid>
+                    <div class="stat-card" *ngFor="let stat of stats; let i = index">
+                        <div class="stat-number">
+                            <span class="counter">{{ displayNumbers[i] }}</span><span class="suffix">{{ stat.suffix }}</span>
+                        </div>
+                        <div class="stat-label">{{ stat.label }}</div>
                     </div>
                 </div>
             </div>
