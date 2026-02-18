@@ -10,11 +10,8 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4" *ngFor="let location of locations; let i = index">
                 <div class="location-card animate__animated animate__fadeInUp"
-                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'"
-                    (click)="selectLocation(i)"
-                    [class.active]="selectedLocation === i"
-                    role="button"
-                    tabindex="0">
+                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'" (click)="selectLocation(i)"
+                    [class.active]="selectedLocation === i" role="button" tabindex="0">
                     <div class="location-header">
                         <i class="fas fa-map-pin"></i>
                         <h4>{{ location.name }}</h4>
@@ -45,15 +42,77 @@
             </div>
         </div>
 
-        <!-- Instagram CTA -->
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <div class="instagram-cta">
-                    <a href="https://www.instagram.com/" target="_blank" class="instagram-btn">
-                        <i class="fab fa-instagram"></i>
-                        <span>¡Síguenos en Instagram!</span>
-                        <small>&#64;autoescuela</small>
-                    </a>
+        <!-- Comentarios Positivos -->
+        <div class="row mt-5">
+            <div class="col-12 text-center mb-4">
+                <h3 class="section-title">Lo que dicen nuestros alumnos</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente experiencia! El instructor fue muy paciente y profesional.
+                        Aprobé el examen a la primera gracias a ellos."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>María González</strong>
+                            <span>Alumna - Caja Automática</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Muy recomendable. Las clases son súper personalizadas y el servicio
+                        puerta a puerta es un golazo. Los mejores de Buenos Aires."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Lucas Rodríguez</strong>
+                            <span>Alumno - Caja Manual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Arranqué con mucho miedo al volante y en pocas clases ya me sentía
+                        segura. Los instructores transmiten mucha confianza."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Valentina López</strong>
+                            <span>Alumna - Caja Manual</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

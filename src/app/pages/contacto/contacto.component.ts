@@ -109,7 +109,7 @@ export class ContactoComponent {
         `Curso de interés: ${this.formData.curso || 'No especificado'}%0A` +
         `Mensaje: ${this.formData.mensaje}`;
 
-      window.open(`https://api.whatsapp.com/send?phone=+541170844411&text=${message}`, '_blank');
+      window.open(`https://api.whatsapp.com/send?phone=+541144717603&text=${message}`, '_blank');
 
       this.isSubmitting = false;
       this.submitSuccess = true;

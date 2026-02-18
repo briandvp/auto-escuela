@@ -1,4 +1,4 @@
-<!-- CONTACTO PAGE -->
+<!-- CONTACTO PAGE - SECTION DISABLED
 <section class="page-hero contact-hero">
     <div class="container">
         <h1>Contacto</h1>
@@ -9,7 +9,6 @@
 <section class="section-padding">
     <div class="container">
         <div class="row">
-            <!-- Contact Info -->
             <div class="col-lg-5 mb-4 mb-lg-0">
                 <div class="contact-info-card">
                     <h3>Información de Contacto</h3>
@@ -70,113 +69,16 @@
                 </div>
             </div>
 
-            <!-- Contact Form -->
             <div class="col-lg-7">
                 <div class="contact-form-card">
                     <h3>Envianos un Mensaje</h3>
                     <p>Completá el formulario y te responderemos a la brevedad</p>
-
-                    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre completo *</label>
-                                    <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" required
-                                        class="form-control" [ngClass]="getFieldClass('nombre')"
-                                        (blur)="onFieldBlur('nombre')"
-                                        (input)="onFieldChange('nombre')"
-                                        placeholder="Tu nombre">
-                                    <div class="field-error" *ngIf="fieldTouched['nombre'] && fieldErrors['nombre']">
-                                        <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['nombre'] }}
-                                    </div>
-                                    <div class="field-success" *ngIf="fieldTouched['nombre'] && !fieldErrors['nombre'] && formData.nombre">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="telefono">Teléfono *</label>
-                                    <input type="tel" id="telefono" name="telefono" [(ngModel)]="formData.telefono"
-                                        required class="form-control" [ngClass]="getFieldClass('telefono')"
-                                        (blur)="onFieldBlur('telefono')"
-                                        (input)="onFieldChange('telefono')"
-                                        placeholder="Tu teléfono">
-                                    <div class="field-error" *ngIf="fieldTouched['telefono'] && fieldErrors['telefono']">
-                                        <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['telefono'] }}
-                                    </div>
-                                    <div class="field-success" *ngIf="fieldTouched['telefono'] && !fieldErrors['telefono'] && formData.telefono">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required
-                                class="form-control" [ngClass]="getFieldClass('email')"
-                                (blur)="onFieldBlur('email')"
-                                (input)="onFieldChange('email')"
-                                placeholder="tu@email.com">
-                            <div class="field-error" *ngIf="fieldTouched['email'] && fieldErrors['email']">
-                                <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['email'] }}
-                            </div>
-                            <div class="field-success" *ngIf="fieldTouched['email'] && !fieldErrors['email'] && formData.email">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <label for="curso">Curso de interés</label>
-                            <select id="curso" name="curso" [(ngModel)]="formData.curso" class="form-control">
-                                <option value="">Seleccionar...</option>
-                                <option value="auto-manual">Clases Auto - Caja Manual</option>
-                                <option value="auto-automatico">Clases Auto - Caja Automática</option>
-                                <option value="moto-a21">Clases Moto - CAT A21</option>
-                                <option value="moto-a22">Clases Moto - CAT A22</option>
-                                <option value="alquiler">Alquiler para Examen</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group mb-4">
-                            <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje" name="mensaje" [(ngModel)]="formData.mensaje" required
-                                class="form-control" [ngClass]="getFieldClass('mensaje')"
-                                (blur)="onFieldBlur('mensaje')"
-                                (input)="onFieldChange('mensaje')"
-                                rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
-                            <div class="field-error" *ngIf="fieldTouched['mensaje'] && fieldErrors['mensaje']">
-                                <i class="fas fa-exclamation-circle"></i> {{ fieldErrors['mensaje'] }}
-                            </div>
-                            <div class="field-success" *ngIf="fieldTouched['mensaje'] && !fieldErrors['mensaje'] && formData.mensaje">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn-primary-custom w-100"
-                            [disabled]="!contactForm.valid || isSubmitting">
-                            <span *ngIf="!isSubmitting">
-                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                            </span>
-                            <span *ngIf="isSubmitting">
-                                <i class="fas fa-spinner fa-spin"></i> Enviando...
-                            </span>
-                        </button>
-
-                        <div *ngIf="submitMessage" class="alert mt-3" [class.alert-success]="submitSuccess"
-                            [class.alert-danger]="!submitSuccess">
-                            {{ submitMessage }}
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Offices Section -->
 <section class="offices-section section-padding">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
@@ -213,3 +115,4 @@
         </div>
     </div>
 </section>
+-->
