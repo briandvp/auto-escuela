@@ -14,7 +14,8 @@ export class ClasesAutoComponent implements OnInit {
     this.seoService.updateSeoData({
       title: 'Clases de Auto',
       description: 'Clases de manejo de auto personalizadas. Instructores pacientes y vehículos doble comando. Preparate para el examen práctico en CABA y GBA.',
-      keywords: 'clases de manejo auto, aprender a manejar auto, curso de manejo, examen de manejo, licencia de conducir auto, practica de manejo'
+      keywords: 'clases de manejo auto, aprender a manejar auto, curso de manejo, examen de manejo, licencia de conducir auto, practica de manejo',
+      ogUrl: 'https://www.miautoescuela.es/clases-auto'
     });
   }
 

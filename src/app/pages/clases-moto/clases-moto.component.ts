@@ -14,7 +14,8 @@ export class ClasesMotoComponent implements OnInit {
     this.seoService.updateSeoData({
       title: 'Clases de Moto',
       description: 'Aprendé a manejar moto con seguridad. Cursos para principiantes y avanzados. Practicá en nuestra pista exclusiva o en tránsito real.',
-      keywords: 'clases de manejo moto, aprender a manejar moto, curso de moto, examen de moto, licencia de conducir moto, practica de moto'
+      keywords: 'clases de manejo moto, aprender a manejar moto, curso de moto, examen de moto, licencia de conducir moto, practica de moto',
+      ogUrl: 'https://www.miautoescuela.es/clases-moto'
     });
   }
 
