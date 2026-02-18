@@ -15,15 +15,15 @@ export class ServicesSectionComponent implements OnInit {
     },
     {
       icon: 'fas fa-home',
-      title: 'Vamos a Domicilio',
-      description: 'Pasamos a buscarte por tu hogar, trabajo o gimnasio para brindarte la clase.',
-      detail: 'Comodidad de aprender desde donde prefieras'
+      title: 'Servicio Puerta a Puerta',
+      description: 'Pasamos a buscarte por tu hogar, trabajo o gimnasio en Capital Federal y GBA para brindarte la clase de manejo.',
+      detail: 'Comodidad de aprender desde donde prefieras en Buenos Aires'
     },
     {
       icon: 'fas fa-car-alt',
-      title: 'Alquiler para Examen',
-      description: 'Te llevamos a rendir o te esperamos en la pista a la hora indicada.',
-      detail: 'Vehículo listo para tu examen de manejo'
+      title: 'Alquiler de Vehículo para Examen',
+      description: 'Te llevamos a rendir el examen práctico o te esperamos en la pista a la hora indicada. Vehículo habilitado con doble comando.',
+      detail: 'Vehículo listo para tu examen de manejo en Buenos Aires'
     },
     {
       icon: 'fas fa-award',
