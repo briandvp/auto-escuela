@@ -27,7 +27,7 @@ El banner principal contiene un carrusel de 3 diapositivas que cambia automátic
 **Diapositivas disponibles:**
 - 📍 Promoción de Auto (5 clases por $188.000)
 - 🏍️ Clases de Moto (CAT A21 y A22)
-- 🚗 Clases con Caja Automática ($218.000)
+- 🚗 Clases con Caja Manual ($218.000)
 
 ### 🖱️ Interacciones
 
