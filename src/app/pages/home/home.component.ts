@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.seoService.updateSeoData({
       title: 'Inicio - Clases de Manejo en Buenos Aires',
-      description: 'Autoescuela con 10 años de experiencia formando conductores responsables. Clases de manejo de auto y moto en Capital Federal, Zona Norte, Oeste y Sur. Servicio puerta a puerta, instructores certificados, vehículos doble comando. Aprende a manejar con los mejores.',
-      keywords: 'autoescuela Buenos Aires, escuela de manejo CABA, clases de manejo Capital Federal, licencia de conducir GBA, aprender a manejar auto, clases de manejo moto, curso de manejo, examen de manejo, autoescuela zona norte, autoescuela zona sur, autoescuela zona oeste, clases de manejo puerta a puerta, instructor de manejo certificado, vehículo doble comando, examen práctico manejo',
+      description: 'Autoescuela con 10 años de experiencia formando conductores responsables. Clases de manejo de auto y moto en Capital Federal y Zona Norte. Servicio puerta a puerta, instructores certificados, vehículos doble comando. Aprende a manejar con los mejores.',
+      keywords: 'autoescuela Buenos Aires, escuela de manejo CABA, clases de manejo Capital Federal, licencia de conducir GBA, aprender a manejar auto, clases de manejo moto, curso de manejo, examen de manejo, autoescuela zona norte, clases de manejo puerta a puerta, instructor de manejo certificado, vehículo doble comando, examen práctico manejo',
       ogUrl: 'https://www.miautoescuela.es/'
     });
 
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
           "name": "¿Dónde dan clases de manejo en Buenos Aires?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ofrecemos clases de manejo de auto y moto en Capital Federal, Zona Norte, Zona Oeste y Zona Sur. Servicio puerta a puerta con instructores certificados."
+            "text": "Ofrecemos clases de manejo de auto y moto en Capital Federal y Zona Norte. Servicio puerta a puerta con instructores certificados."
           }
         },
         {
