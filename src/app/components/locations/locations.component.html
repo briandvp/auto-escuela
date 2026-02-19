@@ -2,16 +2,19 @@
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
-                <h2 class="section-title">Zonas de Cobertura - Clases de Manejo en Buenos Aires</h2>
-                <p class="section-subtitle mx-auto">Ofrecemos clases de manejo de auto y moto en Capital Federal, Zona Norte, Zona Oeste y Zona Sur. Servicio puerta a puerta en toda el área metropolitana.</p>
+                <h2 class="section-title">Nuestras Oficinas</h2>
+                <p class="section-subtitle mx-auto">Cursos en Capital Federal y Gran Buenos Aires</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4" *ngFor="let location of locations; let i = index">
                 <div class="location-card animate__animated animate__fadeInUp"
-                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'" (click)="selectLocation(i)"
-                    [class.active]="selectedLocation === i" role="button" tabindex="0">
+                    [style.animation-delay]="(i * 0.1 + 0.1) + 's'"
+                    (click)="selectLocation(i)"
+                    [class.active]="selectedLocation === i"
+                    role="button"
+                    tabindex="0">
                     <div class="location-header">
                         <i class="fas fa-map-pin"></i>
                         <h4>{{ location.name }}</h4>
@@ -33,6 +36,10 @@
                         <button class="map-btn" (click)="openGoogleMaps(location); $event.stopPropagation()">
                             <i class="fas fa-directions"></i> Ver en Google Maps
                         </button>
+                        <a href="https://api.whatsapp.com/send/?phone=541144717603&text=Hola%2C+estoy+interesado+en+sus+cursos+y+servicios+de+autoescuela&type=phone_number&app_absent=0"
+                            class="whatsapp-btn" target="_blank" (click)="$event.stopPropagation()">
+                            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                        </a>
                     </div>
 
                     <div class="expand-indicator">
@@ -42,79 +49,18 @@
             </div>
         </div>
 
-        <!-- Comentarios Positivos -->
-        <div class="row mt-5">
-            <div class="col-12 text-center mb-4">
-                <h3 class="section-title">Testimonios de Nuestros Alumnos - Autoescuela Buenos Aires</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Excelente experiencia! El instructor fue muy paciente y profesional.
-                        Aprobé el examen a la primera gracias a ellos."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div class="author-info">
-                            <strong>María González</strong>
-                            <span>Alumna - Caja manual</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Muy recomendable. Las clases de manejo son súper personalizadas y el servicio
-                        puerta a puerta es un golazo. La mejor autoescuela de Buenos Aires. Instructores excelentes en Capital Federal."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div class="author-info">
-                            <strong>Lucas Rodríguez</strong>
-                            <span>Alumno - Caja Manual</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">"Arranqué con mucho miedo al volante y en pocas clases ya me sentía
-                        segura. Los instructores transmiten mucha confianza."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div class="author-info">
-                            <strong>Valentina López</strong>
-                            <span>Alumna - Caja Manual</span>
-                        </div>
-                    </div>
+        <!-- Instagram CTA -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="instagram-cta">
+                    <a href="https://www.instagram.com/" target="_blank" class="instagram-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>¡Síguenos en Instagram!</span>
+                        <small>&#64;autoescuela</small>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+manual
