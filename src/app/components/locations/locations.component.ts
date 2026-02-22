@@ -12,7 +12,7 @@ export class LocationsComponent implements OnInit {
       name: 'Zona Sur',
       city: 'Avellaneda',
       address: 'Pastor Obligado 75',
-      phone: '11 5263-0411',
+      phone: '+54 11 4471-7603',
       hours: 'Lun-Vie: 8:00 - 21:00',
       coords: { lat: -34.7580, lng: -58.3624 }
     }

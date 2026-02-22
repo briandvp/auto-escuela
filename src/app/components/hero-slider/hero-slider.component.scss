@@ -4,7 +4,7 @@
     position: relative;
     height: 600px;
     overflow: hidden;
-    margin-top: 130px;
+    margin-top: 72px;
 
     .hero-overlay {
         position: absolute;
@@ -313,7 +313,7 @@
 // Media Queries
 @media (max-width: 991px) {
     .hero-section {
-        margin-top: 80px;
+        margin-top: 68px;
         height: auto;
         min-height: 500px;
 
